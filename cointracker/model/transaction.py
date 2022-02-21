@@ -4,7 +4,7 @@ from marshmallow import Schema, fields
 
 
 class Transaction():
-  def __init__(self, description, amount, type):
+  def __init__(self id,amount,currency,date,reference, description,  type):
     self.description = description
     self.amount = amount
     self.created_at = dt.datetime.now()

@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 
+
 from cointracker.model.expense import Expense, ExpenseSchema
 from cointracker.model.income import Income, IncomeSchema
 from cointracker.model.transaction_type import TransactionType
@@ -44,6 +45,11 @@ def add_expense():
   expense = ExpenseSchema().load(request.get_json())
   transactions.append(expense.data)
   return "", 204
+
+
+@app.route('/currencies')
+def get_currencies():
+
 
 
 if __name__ == "__main__":
